@@ -1,0 +1,104 @@
+/* --- Общие стили и шрифты --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    background-color: #e0f7fa; /* Светло-голубой фон */
+    color: #263238; /* Темно-синий основной текст */
+}
+
+/* Стилизация основного контента (контейнер по умолчанию в шаблоне) */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #b2ebf2;
+}
+
+/* Стилизация заголовков */
+h1, h2, h3 {
+    color: #007780;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+}
+
+/* Стилизация контента страницы */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Стили для секций внутри страниц */
+.sdlc-section {
+    background-color: #f0f8ff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #00bcd4; /* Выделение блока слева */
+    transition: background-color 0.3s ease;
+}
+
+    .sdlc-section:hover {
+        background-color: #e6f7ff;
+    }
+
+/* Стилизация футера (по умолчанию в шаблоне) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: #006064;
+    color: #e0f7fa;
+    font-size: 0.9em;
+    border-top: 3px solid #00bcd4;
+}
+/* --- Добавьте этот блок в конец site.css --- */
+
+/* 
+ * Принудительное позиционирование футера внизу, чтобы он не перекрывал контент 
+ */
+html {
+    position: relative;
+    min-height: 100%; /* Гарантируем, что HTML занимает всю высоту окна */
+}
+
+body {
+    margin: 0;
+    padding: 0 0 100px 0; /* Добавляем нижний отступ, равный высоте футера (100px) */
+    /* Остальные стили body сохраняются */
+}
+
+footer {
+    position: absolute; /* Или relative, но абсолютное позиционирование часто помогает */
+    bottom: 0;
+    width: 100%;
+    height: 80px; /* Укажите примерную высоту вашего футера */
+    /* Остальные стили футера сохраняются */
+}
